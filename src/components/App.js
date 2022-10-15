@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import Review from "./Review";
+import Reviews from "./Reviews";
 
 function App() {
 	return (
 		<div className="container">
 			<Header />
-			<Review />
+			<Reviews />
 		</div>
 	);
 }

@@ -178,3 +178,20 @@ p {
 	flex-direction: column;
 	align-items: center;
 }
+.rnd-btn {
+	color: var(--clr-primary-5);
+	margin-top: 0.5rem;
+	background: #ebf7ff;
+	background: var(--clr-primary-10);
+	padding: 0.25rem 0.5rem;
+	text-transform: capitalize;
+	border-radius: 0.25rem;
+	border-radius: var(--radius);
+	transition: all 0.3s linear;
+	transition: var(--transition);
+	border-color: transparent;
+}
+.rnd-btn:hover {
+	background: var(--clr-primary-5);
+	color: black;
+}

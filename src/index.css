@@ -65,6 +65,9 @@ body {
 	line-height: 1.5;
 	font-size: 0.875rem;
 }
+button {
+	cursor: pointer;
+}
 ul {
 	list-style-type: none;
 }
@@ -129,6 +132,8 @@ p {
 
 .change-btns {
 	color: var(--clr-primary-7);
+	display: flex;
+	flex-direction: column;
 }
 .header {
 	margin: 2rem;
@@ -155,12 +160,16 @@ p {
 	color: var(--clr-primary-5);
 	font-size: 0.85rem;
 }
-.name .text {
+.text {
 	text-align: center;
+}
+.next-btn {
+	background: none;
+	border: none;
+	color: inherit;
 }
 .reviews {
 	width: 38rem;
-	height: 25rem;
 	padding: 1.5rem;
 	box-shadow: var(--light-shadow);
 	border-radius: var(--radius);

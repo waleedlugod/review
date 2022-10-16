@@ -10,23 +10,39 @@ function Reviews() {
 	function handleChangeReview(offset) {
 		const resultIndex = currReview + offset;
 		if (resultIndex < 0) {
-			setCurrReview(reviews.length + resultIndex);
+			setCurrReview(() => reviews.length + resultIndex);
 		} else if (resultIndex >= reviews.length) {
-			setCurrReview(resultIndex - reviews.length);
+			setCurrReview(() => resultIndex - reviews.length);
 		} else {
-			setCurrReview(resultIndex);
+			setCurrReview(() => resultIndex);
 		}
+	}
+
+	function getRandomReview() {
+		let num = 0;
+		do {
+			num = Math.floor(Math.random() * reviews.length);
+		} while (num == currReview);
+		return num;
 	}
 
 	return (
 		<div className="reviews">
 			<Review key={reviews[currReview].id} {...reviews[currReview]} />
 			<div className="change-btns">
-				<button onClick={() => handleChangeReview(-1)}>
-					<LeftArrow />
-				</button>
-				<button onClick={() => handleChangeReview(1)}>
-					<RightArrow />
+				<div>
+					<button className="next-btn" onClick={() => handleChangeReview(-1)}>
+						<LeftArrow />
+					</button>
+					<button className="next-btn" onClick={() => handleChangeReview(1)}>
+						<RightArrow />
+					</button>
+				</div>
+				<button
+					className="rnd-btn"
+					onClick={() => setCurrReview(() => getRandomReview())}
+				>
+					Surprise Me
 				</button>
 			</div>
 		</div>

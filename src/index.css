@@ -187,7 +187,6 @@ p {
 	text-transform: capitalize;
 	border-radius: 0.25rem;
 	border-radius: var(--radius);
-	transition: all 0.3s linear;
 	transition: var(--transition);
 	border-color: transparent;
 }
